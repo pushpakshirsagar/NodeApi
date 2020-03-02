@@ -25,15 +25,16 @@ const Sequelize = require("sequelize");
 const bcrypt = require('bcryptjs');
 
 const User = dbConfig.define('users',{
-	name: {
+	first_name: {
+      type: Sequelize.STRING
+    },
+    last_name: {
       type: Sequelize.STRING
     },
     email:{
       type: Sequelize.STRING
     },
-    password:{
-      type: Sequelize.STRING
-    },
+   
     remember_token:{
       type: Sequelize.STRING
     },
